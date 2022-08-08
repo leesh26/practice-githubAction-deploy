@@ -23,6 +23,7 @@ else
 fi
 
 
-DEPLOY_JAR=$DEPLOY_PATH$JAR_NAME
+#DEPLOY_JAR=$DEPLOY_PATH$JAR_NAME
+DEPLOY_JAR = $(ls /home/ubuntu/action/practice-githubAction-deploy-0.0.1-SNAPSHOT.jar)
 echo "> DEPLOY_JAR 배포"    >> /home/ubuntu/action/deploy.log
 sudo nohup java -jar $DEPLOY_JAR >> /home/ubuntu/deploy.log 2>/home/ubuntu/action/deploy_err.log &
